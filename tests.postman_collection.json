@@ -532,7 +532,7 @@
 					"name": "1.bazovie_vozmozhnosti",
 					"item": [
 						{
-							"name": "functional_test_\"yazik_zaprosov\" менеджер лизингу",
+							"name": "\"менеджер_лизингу\"",
 							"event": [
 								{
 									"listen": "test",
@@ -555,17 +555,10 @@
 											"",
 											"pm.globals.set(\"numbeForUchetSlovoform\", pm.response.json().found);",
 											"",
-											"",
-											"",
-											"",
-											"",
 											"pm.test(\"All items have both words\", function () {",
 											"    let array = eval(globals.numberOfItemsWhichDoesntHaveBothStrings)('менедж', 'лизинг', pm.response.json());",
 											"    pm.expect(array.length).to.be.equal(0);",
-											"});",
-											"",
-											"",
-											""
+											"});"
 										],
 										"type": "text/javascript"
 									}
@@ -657,7 +650,7 @@
 							"response": []
 						},
 						{
-							"name": "менеджер по",
+							"name": "\"менеджер_по\"",
 							"event": [
 								{
 									"listen": "test",
@@ -715,7 +708,7 @@
 							"name": "1.padezhi",
 							"item": [
 								{
-									"name": "functional_test_\"yazik_zaprosov\" менеджеров лизинг",
+									"name": "\"менеджеров_лизинг\"",
 									"event": [
 										{
 											"listen": "test",
@@ -958,7 +951,7 @@
 					"name": "4.uchet_sinonimov",
 					"item": [
 						{
-							"name": "техник механик",
+							"name": "\"техник_механик\"",
 							"event": [
 								{
 									"listen": "test",
@@ -1241,7 +1234,7 @@
 					"name": "7.iskluchit_slovo",
 					"item": [
 						{
-							"name": "инженер не инженер",
+							"name": "\"инженер_NOT_инженер\"",
 							"event": [
 								{
 									"listen": "test",
@@ -1295,7 +1288,7 @@
 					"name": "8.obedinenie_neskolkih_uslovii",
 					"item": [
 						{
-							"name": "(летчик AND испытатель) OR маляр",
+							"name": "(летчик_AND_испытатель)_OR_(маляр)",
 							"event": [
 								{
 									"listen": "test",
@@ -1309,8 +1302,6 @@
 											"",
 											"let letchAndIspitatel = eval(globals.numberOfItemsWhichDoesntHaveBothStrings)('летчик', 'испытат', pm.response.json());",
 											"let malyar = eval(globals.numberOfItemsWhichDoesntHaveBothStrings)('маляр', '', pm.response.json());",
-											"",
-											"",
 											"",
 											"pm.test(\"checkNoMatch\", function () {",
 											"    pm.expect(eval(globals.checkNoMatch)(letchAndIspitatel, malyar)).to.be.equal(true);",
@@ -1511,7 +1502,7 @@
 			"name": "3.avtodopolnenie",
 			"item": [
 				{
-					"name": "1.\"avtodopolnenie\"_structure",
+					"name": "\"avtodopolnenie\"_structure",
 					"event": [
 						{
 							"listen": "test",
